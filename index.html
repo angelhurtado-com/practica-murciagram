@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MurciaGram | Descubre la Región de Murcia</title>
+    <meta name="description" content="Explora los mejores rincones, patrimonio histórico, playas y gastronomía de los municipios de la Región de Murcia en MurciaGram.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="MurciaGram - El Pinterest de la Región de Murcia">
+    <meta property="og:description" content="Inspiración visual de los municipios más emblemáticos de la Región de Murcia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://angelhurtado-com.github.io/practica-murciagram/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="todos">
+
+    <header class="main-header">
+        <h1><i class="fa-solid fa-camera-retro"></i> MurciaGram</h1>
+        <p>Turismo y Patrimonio · Región de Murcia</p>
+    </header>
+
+    <span id="huerta" hidden></span>
+    <span id="costa" hidden></span>
+    <span id="noroeste" hidden></span>
+    <span id="altiplano" hidden></span>
+
+    <aside class="sidebar">
+        <nav aria-label="Filtros por comarca">
+            <h2>Comarcas y Zonas</h2>
+            <ul>
+                <li><a href="#todos" class="btn-todos"><i class="fa-solid fa-compass"></i> Todos los destinos</a></li>
+                <li><a href="#huerta" class="btn-huerta"><i class="fa-solid fa-leaf"></i> Huerta de Murcia</a></li>
+                <li><a href="#costa" class="btn-costa"><i class="fa-solid fa-umbrella-beach"></i> Costa Cálida</a></li>
+                <li><a href="#noroeste" class="btn-noroeste"><i class="fa-solid fa-mountain"></i> Noroeste y Valle</a></li>
+                <li><a href="#altiplano" class="btn-altiplano"><i class="fa-solid fa-wine-glass"></i> Altiplano</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="gallery">
+
+        <article class="pin-card" data-zona="huerta">
+            <figure class="pin-media">
+                <picture>
+                    <source media="(width <= 600px)" srcset="assets/img/murcia-mobile.jpg">
+                    <img src="assets/img/murcia-desktop.jpg" alt="Ayuntamiento y Catedral de Murcia">
+                </picture>
+                <figcaption class="pin-overlay">
+                    <p class="pin-desc">La Catedral de Santa María y la Plaza del Cardenal Belluga brillan en el corazón de la Huerta del Segura.</p>
+                    <nav class="pin-actions" aria-label="Acciones de tarjeta">
+                        <label class="like-btn" title="Me gusta">
+                            <input type="checkbox" class="like-toggle">
+                            <i class="fa-regular fa-heart icon-empty"></i>
+                            <i class="fa-solid fa-heart icon-full"></i>
+                        </label>
+                        <a href="https://www.turismodemurcia.es/" target="_blank" rel="noopener noreferrer" class="ext-btn" title="Web oficial">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </nav>
+                </figcaption>
+            </figure>
+            <header class="pin-info">
+                <h2>Murcia Capital</h2>
+                <span>Huerta de Murcia</span>
+            </header>
+        </article>
+
+        <article class="pin-card" data-zona="costa">
+            <figure class="pin-media">
+                <picture>
+                    <source media="(width <= 600px)" srcset="assets/img/cartagena-mobile.jpg">
+                    <img src="assets/img/cartagena-desktop.jpg" alt="Palacio Consistorial y Teatro Romano de Cartagena">
+                </picture>
+                <figcaption class="pin-overlay">
+                    <p class="pin-desc">Tres mil años de historia junto al Mediterráneo: Teatro Romano, puerto natural y arquitectura modernista.</p>
+                    <nav class="pin-actions">
+                        <label class="like-btn" title="Me gusta">
+                            <input type="checkbox" class="like-toggle">
+                            <i class="fa-regular fa-heart icon-empty"></i>
+                            <i class="fa-solid fa-heart icon-full"></i>
+                        </label>
+                        <a href="https://turismo.cartagena.es/" target="_blank" rel="noopener noreferrer" class="ext-btn" title="Web oficial">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </nav>
+                </figcaption>
+            </figure>
+            <header class="pin-info">
+                <h2>Cartagena</h2>
+                <span>Costa Cálida</span>
+            </header>
+        </article>
+
+        <article class="pin-card" data-zona="noroeste">
+            <figure class="pin-media">
+                <picture>
+                    <source media="(width <= 600px)" srcset="assets/img/lorca-mobile.jpg">
+                    <img src="assets/img/lorca-desktop.jpg" alt="Castillo de Lorca Fortaleza del Sol">
+                </picture>
+                <figcaption class="pin-overlay">
+                    <p class="pin-desc">La Ciudad del Sol destaca por su imponente fortaleza medieval y su Semana Santa declarada de Interés Turístico Internacional.</p>
+                    <nav class="pin-actions">
+                        <label class="like-btn" title="Me gusta">
+                            <input type="checkbox" class="like-toggle">
+                            <i class="fa-regular fa-heart icon-empty"></i>
+                            <i class="fa-solid fa-heart icon-full"></i>
+                        </label>
+                        <a href="https://www.lorcaturismo.es/" target="_blank" rel="noopener noreferrer" class="ext-btn" title="Web oficial">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </nav>
+                </figcaption>
+            </figure>
+            <header class="pin-info">
+                <h2>Lorca</h2>
+                <span>Noroeste y Valle</span>
+            </header>
+        </article>
+
+        <article class="pin-card" data-zona="noroeste">
+            <figure class="pin-media">
+                <picture>
+                    <source media="(width <= 600px)" srcset="assets/img/caravaca-mobile.jpg">
+                    <img src="assets/img/caravaca-desktop.jpg" alt="Basílica de la Vera Cruz en Caravaca" loading="lazy">
+                </picture>
+                <figcaption class="pin-overlay">
+                    <p class="pin-desc">Ciudad Santa jubilar coronada por el Santuario de la Vera Cruz y rodeada por las Fuentes del Marqués.</p>
+                    <nav class="pin-actions">
+                        <label class="like-btn" title="Me gusta">
+                            <input type="checkbox" class="like-toggle">
+                            <i class="fa-regular fa-heart icon-empty"></i>
+                            <i class="fa-solid fa-heart icon-full"></i>
+                        </label>
+                        <a href="https://www.turismocaravaca.com/" target="_blank" rel="noopener noreferrer" class="ext-btn" title="Web oficial">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </nav>
+                </figcaption>
+            </figure>
+            <header class="pin-info">
+                <h2>Caravaca de la Cruz</h2>
+                <span>Noroeste y Valle</span>
+            </header>
+        </article>
+
+        <article class="pin-card" data-zona="costa">
+            <figure class="pin-media">
+                <picture>
+                    <source media="(width <= 600px)" srcset="assets/img/aguilas-mobile.jpg">
+                    <img src="assets/img/aguilas-desktop.jpg" alt="Calas vírgenes de Águilas en la Costa Cálida" loading="lazy">
+                </picture>
+                <figcaption class="pin-overlay">
+                    <p class="pin-desc">Más de 28 kilómetros de costa con calas vírgenes como Carolina y Cocedores, además de su emblemático Carnaval.</p>
+                    <nav class="pin-actions">
+                        <label class="like-btn" title="Me gusta">
+                            <input type="checkbox" class="like-toggle">
+                            <i class="fa-regular fa-heart icon-empty"></i>
+                            <i class="fa-solid fa-heart icon-full"></i>
+                        </label>
+                        <a href="https://www.aguilas.es/turismo/" target="_blank" rel="noopener noreferrer" class="ext-btn" title="Web oficial">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </nav>
+                </figcaption>
+            </figure>
+            <header class="pin-info">
+                <h2>Águilas</h2>
+                <span>Costa Cálida</span>
+            </header>
+        </article>
+
+        <article class="pin-card" data-zona="altiplano">
+            <figure class="pin-media">
+                <picture>
+                    <source media="(width <= 600px)" srcset="assets/img/jumilla-mobile.jpg">
+                    <img src="assets/img/jumilla-desktop.jpg" alt="Viñedos y Castillo de Jumilla" loading="lazy">
+                </picture>
+                <figcaption class="pin-overlay">
+                    <p class="pin-desc">Tierra de vinos con Denominación de Origen Protegida, paisajes de montaña y patrimonio monumental.</p>
+                    <nav class="pin-actions">
+                        <label class="like-btn" title="Me gusta">
+                            <input type="checkbox" class="like-toggle">
+                            <i class="fa-regular fa-heart icon-empty"></i>
+                            <i class="fa-solid fa-heart icon-full"></i>
+                        </label>
+                        <a href="https://jumillaturismo.es/" target="_blank" rel="noopener noreferrer" class="ext-btn" title="Web oficial">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </nav>
+                </figcaption>
+            </figure>
+            <header class="pin-info">
+                <h2>Jumilla</h2>
+                <span>Altiplano</span>
+            </header>
+        </article>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2026 MurciaGram · Consejería de Turismo de la Región de Murcia</p>
+    </footer>
+
+</body>
+</html>

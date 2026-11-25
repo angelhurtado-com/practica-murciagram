@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Optimizar Imágenes MurciaGram",
+            "type": "shell",
+            "windows": {
+                "command": "Add-Type -AssemblyName System.Drawing; $outDir = Join-Path $PWD 'assets\\img'; if (!(Test-Path $outDir)) { New-Item -ItemType Directory -Path $outDir | Out-Null }; Get-ChildItem 'assets\\raw\\*.jpg' | ForEach-Object { $name = $_.BaseName; $img = [System.Drawing.Image]::FromFile($_.FullName); foreach ($w in @(400, 1000)) { $h = [int]($img.Height * ($w / $img.Width)); $bmp = New-Object System.Drawing.Bitmap($w, $h); $g = [System.Drawing.Graphics]::FromImage($bmp); $g.DrawImage($img, 0, 0, $w, $h); $suf = if ($w -eq 400) { 'mobile' } else { 'desktop' }; $dest = Join-Path $outDir ($name + '-' + $suf + '.jpg'); $bmp.Save($dest, [System.Drawing.Imaging.ImageFormat]::Jpeg); $g.Dispose(); $bmp.Dispose() }; $img.Dispose() }"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
