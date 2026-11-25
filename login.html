@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MurciaGram | Iniciar Sesión</title>
+    <meta name="description" content="Inicia sesión en MurciaGram para acceder a tu cuenta.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-brand">
+            <h1><a href="index.html"><i class="fa-solid fa-camera-retro"></i> MurciaGram</a></h1>
+            <p>Turismo y Patrimonio · Región de Murcia</p>
+        </div>
+        <a href="index.html" class="btn-secondary">
+            <i class="fa-solid fa-arrow-left"></i> Volver a la galería
+        </a>
+    </header>
+
+    <main class="auth-main">
+        <div class="auth-card auth-card-login">
+            <h2 class="auth-title">Iniciar sesión</h2>
+            <p class="auth-subtitle">Accede a tu cuenta de MurciaGram</p>
+
+            <div id="auth-alert" class="auth-alert" style="display: none;" role="alert"></div>
+
+            <form id="login-form" novalidate>
+                <div class="form-grid">
+                    <!-- Correo electrónico -->
+                    <div class="form-group full-width">
+                        <label for="loginEmail" class="form-label">Correo electrónico</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-envelope input-icon"></i>
+                            <input type="email" id="loginEmail" name="loginEmail" class="form-control" placeholder="ejemplo@murciagram.es" required>
+                        </div>
+                        <span class="error-msg" id="error-loginEmail"></span>
+                    </div>
+
+                    <!-- Contraseña -->
+                    <div class="form-group full-width">
+                        <label for="loginPassword" class="form-label">Contraseña</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock input-icon"></i>
+                            <input type="password" id="loginPassword" name="loginPassword" class="form-control has-toggle" placeholder="Tu contraseña" required>
+                            <button type="button" class="toggle-password" aria-label="Mostrar u ocultar contraseña">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <span class="error-msg" id="error-loginPassword"></span>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group full-width">
+                        <button type="submit" class="btn-primary" id="btn-submit">
+                            <i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <p class="auth-footer-text">
+                ¿Aún no tienes cuenta? <a href="registro.html">Regístrate gratis</a>
+            </p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2026 MurciaGram · Consejería de Turismo de la Región de Murcia</p>
+    </footer>
+
+    <script type="module" src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MurciaGram | Registro de Usuario</title>
+    <meta name="description" content="Crea tu cuenta en MurciaGram para explorar y compartir rincones de la Región de Murcia.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-brand">
+            <h1><a href="index.html"><i class="fa-solid fa-camera-retro"></i> MurciaGram</a></h1>
+            <p>Turismo y Patrimonio · Región de Murcia</p>
+        </div>
+        <a href="index.html" class="btn-secondary">
+            <i class="fa-solid fa-arrow-left"></i> Volver a la galería
+        </a>
+    </header>
+
+    <main class="auth-main">
+        <div class="auth-card auth-card-register">
+            <h2 class="auth-title">Crear cuenta</h2>
+            <p class="auth-subtitle">Regístrate para formar parte de la comunidad de MurciaGram</p>
+
+            <div id="auth-alert" class="auth-alert" style="display: none;" role="alert"></div>
+
+            <form id="register-form" novalidate>
+                <div class="form-grid">
+                    <!-- Nombre -->
+                    <div class="form-group">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user input-icon"></i>
+                            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre" required>
+                        </div>
+                        <span class="error-msg" id="error-nombre"></span>
+                    </div>
+
+                    <!-- Apellidos -->
+                    <div class="form-group">
+                        <label for="apellidos" class="form-label">Apellidos</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user input-icon"></i>
+                            <input type="text" id="apellidos" name="apellidos" class="form-control" placeholder="Tus apellidos" required>
+                        </div>
+                        <span class="error-msg" id="error-apellidos"></span>
+                    </div>
+                    <!-- Email -->
+                    <div class="form-group full-width">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-envelope input-icon"></i>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="ejemplo@murciagram.es" required>
+                        </div>
+                        <span class="error-msg" id="error-email"></span>
+                    </div>
+
+                    <!-- Fecha de nacimiento -->
+                    <div class="form-group">
+                        <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-calendar input-icon"></i>
+                            <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="form-control" required>
+                        </div>
+                        <span class="error-msg" id="error-fechaNacimiento"></span>
+                    </div>
+
+                    <!-- Dirección postal -->
+                    <div class="form-group">
+                        <label for="direccion" class="form-label">Dirección postal</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-location-dot input-icon"></i>
+                            <input type="text" id="direccion" name="direccion" class="form-control" placeholder="C/ Gran Vía, 12, Murcia" required>
+                        </div>
+                        <span class="error-msg" id="error-direccion"></span>
+                    </div>
+
+                    <!-- Contraseña -->
+                    <div class="form-group">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock input-icon"></i>
+                            <input type="password" id="password" name="password" class="form-control has-toggle" placeholder="Mínimo 6 caracteres" required>
+                            <button type="button" class="toggle-password" aria-label="Mostrar u ocultar contraseña">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <span class="error-msg" id="error-password"></span>
+                    </div>
+
+                    <!-- Repetir contraseña -->
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label">Repetir contraseña</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock input-icon"></i>
+                            <input type="password" id="confirmPassword" name="confirmPassword" class="form-control has-toggle" placeholder="Repite tu contraseña" required>
+                            <button type="button" class="toggle-password" aria-label="Mostrar u ocultar contraseña">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <span class="error-msg" id="error-confirmPassword"></span>
+                    </div>
+
+                    <!-- RGPD / LOPDGDD Block -->
+                    <div class="rgpd-box full-width">
+                        <h3><i class="fa-solid fa-shield-halved"></i> Información sobre Protección de Datos</h3>
+                        <ul>
+                            <li><strong>Responsable:</strong> MurciaGram</li>
+                            <li><strong>Finalidad:</strong> Gestión de cuenta de usuario y control de accesos.</li>
+                            <li><strong>Legitimación:</strong> Consentimiento del interesado.</li>
+                            <li><strong>Derechos:</strong> Acceso, rectificación y supresión.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Aceptación Privacidad -->
+                    <div class="form-group full-width">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="aceptoPrivacidad" name="aceptoPrivacidad" required>
+                            <label for="aceptoPrivacidad">
+                                He leído y acepto el tratamiento de mis datos personales conforme al RGPD y la LOPDGDD.
+                            </label>
+                        </div>
+                        <span class="error-msg" id="error-aceptoPrivacidad"></span>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group full-width">
+                        <button type="submit" class="btn-primary" id="btn-submit">
+                            <i class="fa-solid fa-user-plus"></i> Registrarse
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <p class="auth-footer-text">
+                ¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>
+            </p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2026 MurciaGram · Consejería de Turismo de la Región de Murcia</p>
+    </footer>
+
+    <script type="module" src="auth.js"></script>
+</body>
+</html>

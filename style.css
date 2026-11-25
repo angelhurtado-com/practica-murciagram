@@ -1,5 +1,6 @@
 :root {
     --color-primary: #9e1b32;
+    --color-primary-dark: #751224;
     --color-bg: #f4f5f7;
     --color-surface: #ffffff;
     --color-text: #1e293b;
@@ -31,6 +32,10 @@ body {
     color: #ffffff;
     padding: 1.25rem 1.5rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.65rem;
 }
 
 .main-header h1 {
@@ -41,6 +46,74 @@ body {
 .main-header p {
     font-size: 0.9rem;
     opacity: 0.9;
+}
+
+.user-auth-area {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.auth-link-btn,
+#auth-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.auth-link-btn:hover,
+#auth-link:hover {
+    background-color: #ffffff;
+    color: var(--color-primary);
+    transform: translateY(-1px);
+}
+
+.user-logged-info {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-greeting {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.btn-logout {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--color-primary-dark);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.btn-logout:hover {
+    background-color: #580d1a;
+    transform: translateY(-1px);
 }
 
 .sidebar {
@@ -273,9 +346,10 @@ body:not(:has(#huerta:target, #costa:target, #noroeste:target, #altiplano:target
 
     .main-header {
         grid-area: header;
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        text-align: left;
         padding: 1.25rem 2.5rem;
     }
 
